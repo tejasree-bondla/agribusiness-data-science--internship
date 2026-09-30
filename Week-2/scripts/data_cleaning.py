@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 # Load the sample dataset
-input_file = "../data/agribusiness_sample.csv"
+input_file = "Week-2/data/agribusiness_sample.csv"
 df = pd.read_csv(input_file)
 
 print("========== BEFORE CLEANING ==========")
@@ -57,17 +57,29 @@ df = df.drop_duplicates()
 print("Duplicates removed:", duplicates_before)
 
 # --------------------------------------------------
-# 5. Calculate yield
+# 5. Handle missing numeric values
 # --------------------------------------------------
 
-df["Yield_Tonnes_per_Ha"] = np.where(
-    df["Area_Ha"] > 0,
-    df["Production_Tonnes"] / df["Area_Ha"],
-    np.nan
+# Fill missing Area_Ha with the median area
+area_median = df["Area_Ha"].median()
+df["Area_Ha"] = df["Area_Ha"].fillna(area_median)
+
+# Fill missing Production_Tonnes with the median production
+production_median = df["Production_Tonnes"].median()
+df["Production_Tonnes"] = df["Production_Tonnes"].fillna(
+    production_median
 )
 
 # --------------------------------------------------
-# 6. Final validation
+# 6. Calculate yield
+# --------------------------------------------------
+
+df["Yield_Tonnes_per_Ha"] = (
+    df["Production_Tonnes"] / df["Area_Ha"]
+)
+
+# --------------------------------------------------
+# 7. Final validation
 # --------------------------------------------------
 
 print("\n========== AFTER CLEANING ==========")
@@ -83,11 +95,12 @@ print("\nCleaned dataset:")
 print(df)
 
 # --------------------------------------------------
-# 7. Save cleaned dataset
+# 8. Save cleaned dataset
 # --------------------------------------------------
 
-output_file = "../data/agribusiness_cleaned.csv"
+output_file = "Week-2/data/agribusiness_cleaned.csv"
 
 df.to_csv(output_file, index=False)
 
 print("\nCleaned dataset saved to:", output_file)
+
