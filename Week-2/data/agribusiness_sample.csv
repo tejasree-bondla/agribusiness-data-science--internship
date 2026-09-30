@@ -1,0 +1,7 @@
+District,Crop,Season,Year,Area_Ha,Production_Tonnes
+Banaskantha,Wheat,Rabi,2021,3501.49,8795.78
+banaskantha,Wheat,Rabi,2021,3501.49,8795.78
+Patan,Wheat,rabi,2021,381.64,1097.71
+Mehsana,Rice,Kharif,2021,,2858.25
+Ahmedabad,Cotton,Kharif,2021,-25,100
+Surat,Groundnut,Kharif,2021,1200,bad_value
