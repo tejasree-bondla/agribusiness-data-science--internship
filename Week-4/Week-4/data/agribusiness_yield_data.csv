@@ -1,0 +1,16 @@
+State,District,Crop,Season,Area,Production,Yield
+Gujarat,Banaskantha,Wheat,Rabi,3501.49,8795.78,2.5120
+Gujarat,Patan,Wheat,Rabi,381.64,1097.71,2.8763
+Gujarat,Mehsana,Rice,Kharif,1200,2858.25,2.3819
+Gujarat,Ahmedabad,Cotton,Kharif,1200,100,0.0833
+Gujarat,Surat,Groundnut,Kharif,1200,1977.98,1.6483
+Maharashtra,Nashik,Wheat,Rabi,1500,3900,2.6000
+Maharashtra,Pune,Sugarcane,Kharif,1800,14400,8.0000
+Punjab,Ludhiana,Wheat,Rabi,2000,10000,5.0000
+Punjab,Amritsar,Rice,Kharif,1900,9500,5.0000
+Karnataka,Belgaum,Cotton,Kharif,1300,1950,1.5000
+Andhra Pradesh,Guntur,Chilli,Kharif,900,2250,2.5000
+Telangana,Nizamabad,Rice,Kharif,1600,7200,4.5000
+Tamil Nadu,Thanjavur,Rice,Kharif,1700,7650,4.5000
+Uttar Pradesh,Meerut,Sugarcane,Kharif,2100,14700,7.0000
+Rajasthan,Kota,Wheat,Rabi,1800,7200,4.0000
